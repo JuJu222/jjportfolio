@@ -66,6 +66,6 @@
 <style scoped>
   .home-img {
     height: 500px;
-    filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.15));
   }
 </style>
