@@ -15,5 +15,9 @@ import Footer from "./components/Footer.vue";
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap');
 
+body {
+  font-family: 'Fredoka', sans-serif;
+}
 </style>
