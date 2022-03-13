@@ -18,7 +18,7 @@
       </div>
     </div>
     <div>
-      <img class="home-img" src="public/img/justinjapweb.png" alt="" />
+      <img class="home-img" src="img/justinjapweb.png" alt="" />
     </div>
   </div>
   <div class="flex h-60 my-10 mb-96 flex-wrap justify-center">
@@ -66,6 +66,6 @@
 <style scoped>
   .home-img {
     height: 500px;
-    filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.15)) contrast(90%);
   }
 </style>
