@@ -22,9 +22,9 @@
     </div>
   </div>
   <div class="flex h-60 my-10 mb-96 flex-wrap justify-center">
-    <Card class="m-5 z-10"/>
-    <Card class="m-5 z-10"/>
-    <Card class="m-5 z-10"/>
+    <PortfolioCard class="m-5 z-10"/>
+    <PortfolioCard class="m-5 z-10"/>
+    <PortfolioCard class="m-5 z-10"/>
   </div>
   <div>
     <h2 class="text-5xl">Skills</h2>
@@ -38,7 +38,7 @@
 
 <script>
   import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
-  import Card from "./Card.vue";
+  import PortfolioCard from "./PortfolioCard.vue";
 
   const navigation = [
     { name: 'Product', href: '#' },
@@ -50,7 +50,7 @@
   export default {
     name: "Home",
     components: {
-      Card,
+      PortfolioCard,
       Popover,
       PopoverButton,
       PopoverPanel,
