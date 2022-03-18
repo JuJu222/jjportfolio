@@ -27,38 +27,38 @@
     <PortfolioCard class="m-5 z-10"/>
   </div>
   <div>
-    <h2 class="text-5xl">Skills</h2>
+    <h2 class="text-5xl text-center">Skills</h2>
   </div>
-<!--  <div class="overflow-visible flex flex-row mb-96 items-center h-60">-->
-<!--    <Card class="m-5 z-10" />-->
-<!--    <Card class="m-5 z-10" />-->
-<!--    <Card class="m-5 z-10" />-->
-<!--  </div>-->
+  <div class="flex my-10 mb-96 flex-wrap justify-center">
+    <SkillCard class="m-5 z-10" title="Android" icon="img/icons/android.svg"/>
+    <SkillCard class="m-5 z-10" title="CSS" icon="img/icons/css3.svg"/>
+    <SkillCard class="m-5 z-10" title="HTML" icon="img/icons/html5.svg"/>
+    <SkillCard class="m-5 z-10" title="Java" icon="img/icons/java.svg"/>
+    <SkillCard class="m-5 z-10" title="Javascript" icon="img/icons/javascript.svg"/>
+    <SkillCard class="m-5 z-10" title="Kotlin" img-class="w-16" icon="img/icons/kotlin.svg"/>
+    <SkillCard class="m-5 z-10" title="Laravel" icon="img/icons/laravel.svg"/>
+    <SkillCard class="m-5 z-10" title="PHP" icon="img/icons/php.svg"/>
+    <SkillCard class="m-5 z-10" title="Python" icon="img/icons/python.svg"/>
+    <SkillCard class="m-5 z-10" title="Next.js" icon="img/icons/next.svg"/>
+    <SkillCard class="m-5 z-10" title="Vue" icon="img/icons/vue.svg"/>
+    <SkillCard class="m-5 z-10" title="MySQL" icon="img/icons/mysql.svg"/>
+    <SkillCard class="m-5 z-10" title="Firebase" icon="img/icons/firebase.svg"/>
+  </div>
 </template>
 
 <script>
   import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
   import PortfolioCard from "./PortfolioCard.vue";
-
-  const navigation = [
-    { name: 'Product', href: '#' },
-    { name: 'Features', href: '#' },
-    { name: 'Marketplace', href: '#' },
-    { name: 'Company', href: '#' },
-  ]
+  import SkillCard from "./SkillCard.vue";
 
   export default {
     name: "Home",
     components: {
+      SkillCard,
       PortfolioCard,
       Popover,
       PopoverButton,
       PopoverPanel,
-    },
-    setup() {
-      return {
-        navigation,
-      }
     },
   };
 </script>
