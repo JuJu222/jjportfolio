@@ -21,45 +21,67 @@
       <img class="home-img" src="img/justinjapweb.png" alt="" />
     </div>
   </div>
-  <div class="flex h-60 my-10 mb-96 flex-wrap justify-center">
-    <PortfolioCard class="m-5 z-10"/>
-    <PortfolioCard class="m-5 z-10"/>
-    <PortfolioCard class="m-5 z-10"/>
+  <div>
+    <h2 class="text-5xl text-center">Skills</h2>
+    <div class="flex h-60 my-10 flex-wrap justify-center">
+      <PortfolioCard class="m-5 z-10"/>
+      <PortfolioCard class="m-5 z-10"/>
+      <PortfolioCard class="m-5 z-10"/>
+    </div>
   </div>
   <div>
     <h2 class="text-5xl text-center">Skills</h2>
-  </div>
-  <div class="flex my-10 mb-96 flex-wrap justify-center">
-    <SkillCard class="m-5 z-10" title="Android" icon="img/icons/android.svg"/>
-    <SkillCard class="m-5 z-10" title="CSS" icon="img/icons/css3.svg"/>
-    <SkillCard class="m-5 z-10" title="HTML" icon="img/icons/html5.svg"/>
-    <SkillCard class="m-5 z-10" title="Java" icon="img/icons/java.svg"/>
-    <SkillCard class="m-5 z-10" title="Javascript" icon="img/icons/javascript.svg"/>
-    <SkillCard class="m-5 z-10" title="Kotlin" img-class="w-16" icon="img/icons/kotlin.svg"/>
-    <SkillCard class="m-5 z-10" title="Laravel" icon="img/icons/laravel.svg"/>
-    <SkillCard class="m-5 z-10" title="PHP" icon="img/icons/php.svg"/>
-    <SkillCard class="m-5 z-10" title="Python" icon="img/icons/python.svg"/>
-    <SkillCard class="m-5 z-10" title="Next.js" icon="img/icons/next.svg"/>
-    <SkillCard class="m-5 z-10" title="Vue" icon="img/icons/vue.svg"/>
-    <SkillCard class="m-5 z-10" title="MySQL" icon="img/icons/mysql.svg"/>
-    <SkillCard class="m-5 z-10" title="Firebase" icon="img/icons/firebase.svg"/>
+    <div class="flex my-10 mb-96 flex-wrap justify-center">
+      <SkillCard class="m-5 z-10" title="Android" icon="img/icons/android.svg"/>
+      <SkillCard class="m-5 z-10" title="CSS" icon="img/icons/css3.svg"/>
+      <SkillCard class="m-5 z-10" title="HTML" icon="img/icons/html5.svg"/>
+      <SkillCard class="m-5 z-10" title="Java" icon="img/icons/java.svg"/>
+      <SkillCard class="m-5 z-10" title="Javascript" icon="img/icons/javascript.svg"/>
+      <SkillCard class="m-5 z-10" title="Kotlin" img-class="w-16" icon="img/icons/kotlin.svg"/>
+      <SkillCard class="m-5 z-10" title="Laravel" icon="img/icons/laravel.svg"/>
+      <SkillCard class="m-5 z-10" title="PHP" icon="img/icons/php.svg"/>
+      <SkillCard class="m-5 z-10" title="Python" icon="img/icons/python.svg"/>
+      <SkillCard class="m-5 z-10" title="Next.js" icon="img/icons/next.svg"/>
+      <SkillCard class="m-5 z-10" title="Vue" icon="img/icons/vue.svg"/>
+      <SkillCard class="m-5 z-10" title="MySQL" icon="img/icons/mysql.svg"/>
+      <SkillCard class="m-5 z-10" title="Firebase" icon="img/icons/firebase.svg" @click="() => togglePopup('buttonTrigger')"/>
+      <Modal v-if="modalTriggers.buttonTrigger" :togglePopup="() => togglePopup('buttonTrigger')" />
+    </div>
   </div>
 </template>
 
 <script>
+  import { ref } from 'vue';
   import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
   import PortfolioCard from "./PortfolioCard.vue";
   import SkillCard from "./SkillCard.vue";
+  import Modal from "./Modal.vue";
 
   export default {
     name: "Home",
     components: {
+      Modal,
       SkillCard,
       PortfolioCard,
       Popover,
       PopoverButton,
       PopoverPanel,
     },
+    setup() {
+      const modalTriggers = ref({
+        buttonTrigger: false
+      });
+
+      const togglePopup = (trigger) => {
+        modalTriggers.value[trigger] = !modalTriggers.value[trigger]
+      }
+
+      return {
+        Modal,
+        modalTriggers,
+        togglePopup
+      }
+    }
   };
 </script>
 
