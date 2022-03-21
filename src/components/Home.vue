@@ -32,20 +32,21 @@
   <div>
     <h2 class="text-5xl text-center">Skills</h2>
     <div class="flex my-10 mb-96 flex-wrap justify-center">
-      <SkillCard class="m-5 z-10" title="Android" icon="img/icons/android.svg"/>
-      <SkillCard class="m-5 z-10" title="CSS" icon="img/icons/css3.svg"/>
-      <SkillCard class="m-5 z-10" title="HTML" icon="img/icons/html5.svg"/>
-      <SkillCard class="m-5 z-10" title="Java" icon="img/icons/java.svg"/>
-      <SkillCard class="m-5 z-10" title="Javascript" icon="img/icons/javascript.svg"/>
-      <SkillCard class="m-5 z-10" title="Kotlin" img-class="w-16" icon="img/icons/kotlin.svg"/>
-      <SkillCard class="m-5 z-10" title="Laravel" icon="img/icons/laravel.svg"/>
-      <SkillCard class="m-5 z-10" title="PHP" icon="img/icons/php.svg"/>
-      <SkillCard class="m-5 z-10" title="Python" icon="img/icons/python.svg"/>
-      <SkillCard class="m-5 z-10" title="Next.js" icon="img/icons/next.svg"/>
-      <SkillCard class="m-5 z-10" title="Vue" icon="img/icons/vue.svg"/>
-      <SkillCard class="m-5 z-10" title="MySQL" icon="img/icons/mysql.svg"/>
-      <SkillCard class="m-5 z-10" title="Firebase" icon="img/icons/firebase.svg" @click="() => togglePopup('buttonTrigger')"/>
-      <Modal v-if="modalTriggers.buttonTrigger" :togglePopup="() => togglePopup('buttonTrigger')" />
+      <SkillCard class="m-5" title="Android" icon="img/icons/android.svg"/>
+      <SkillCard class="m-5" title="CSS" icon="img/icons/css3.svg"/>
+      <SkillCard class="m-5" title="HTML" icon="img/icons/html5.svg"/>
+      <SkillCard class="m-5" title="Java" icon="img/icons/java.svg"/>
+      <SkillCard class="m-5" title="Javascript" icon="img/icons/javascript.svg"/>
+      <SkillCard class="m-5" title="Kotlin" img-class="w-16" icon="img/icons/kotlin.svg"/>
+      <SkillCard class="m-5" title="Laravel" icon="img/icons/laravel.svg"/>
+      <SkillCard class="m-5" title="PHP" icon="img/icons/php.svg"/>
+      <SkillCard class="m-5" title="Python" icon="img/icons/python.svg"/>
+      <SkillCard class="m-5" title="Next.js" icon="img/icons/next.svg"/>
+      <SkillCard class="m-5" title="Vue" icon="img/icons/vue.svg"/>
+      <SkillCard class="m-5" title="MySQL" icon="img/icons/mysql.svg" @click="open1 = true"/>
+      <SkillCard class="m-5" title="Firebase" icon="img/icons/firebase.svg" @click="open2 = true"/>
+      <Modal title="1" :open="open1" @clicked="open1 = false"/>
+      <Modal title="2" :open="open2" @clicked="open2 = false"/>
     </div>
   </div>
 </template>
@@ -67,19 +68,10 @@
       PopoverButton,
       PopoverPanel,
     },
-    setup() {
-      const modalTriggers = ref({
-        buttonTrigger: false
-      });
-
-      const togglePopup = (trigger) => {
-        modalTriggers.value[trigger] = !modalTriggers.value[trigger]
-      }
-
+    data() {
       return {
-        Modal,
-        modalTriggers,
-        togglePopup
+        open1: false,
+        open2: false
       }
     }
   };
