@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar-active {
+    color: white !important;
+}
+
+.navbar-active:hover {
+    color: black !important;
+}
