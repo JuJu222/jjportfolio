@@ -7,7 +7,7 @@
     </div>
     <div class="p-3 space-y-3 card-body">
       <h3 class="text-gray-700 font-semibold text-md">
-        Nepal Mountain
+        {{ portfolio.title }}
       </h3>
       <p class="text-sm text-gray-900 leading-sm">
         Bienvenido a la montaña de nepal un maravilloso lugar en el
@@ -89,7 +89,10 @@
 
 <script>
   export default {
-    name: "PortfolioCard"
+    name: "PortfolioCard",
+    props: {
+      portfolio: Object
+    }
   };
 </script>
 

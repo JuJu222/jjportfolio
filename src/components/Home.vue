@@ -24,9 +24,7 @@
   <div>
     <h2 class="text-5xl text-center">Skills</h2>
     <div class="flex h-60 my-10 flex-wrap justify-center">
-      <PortfolioCard class="m-5 z-10"/>
-      <PortfolioCard class="m-5 z-10"/>
-      <PortfolioCard class="m-5 z-10"/>
+      <PortfolioCard v-for="(portfolio, index) in portfolios" class="m-5 z-10" :portfolio="portfolio" @click="open[index] = true"/>
     </div>
   </div>
   <div>
@@ -43,10 +41,9 @@
       <SkillCard class="m-5" title="Python" icon="img/icons/python.svg"/>
       <SkillCard class="m-5" title="Next.js" icon="img/icons/next.svg"/>
       <SkillCard class="m-5" title="Vue" icon="img/icons/vue.svg"/>
-      <SkillCard class="m-5" title="MySQL" icon="img/icons/mysql.svg" @click="open1 = true"/>
-      <SkillCard class="m-5" title="Firebase" icon="img/icons/firebase.svg" @click="open2 = true"/>
-      <Modal title="1" :open="open1" @clicked="open1 = false"/>
-      <Modal title="2" :open="open2" @clicked="open2 = false"/>
+      <SkillCard class="m-5" title="MySQL" icon="img/icons/mysql.svg"/>
+      <SkillCard class="m-5" title="Firebase" icon="img/icons/firebase.svg"/>
+      <Modal v-for="(portfolio, index) in portfolios" :portfolio="portfolio" :open="open[index]" @clicked="open[index] = false"/>
     </div>
   </div>
 </template>
@@ -57,6 +54,27 @@
   import PortfolioCard from "./PortfolioCard.vue";
   import SkillCard from "./SkillCard.vue";
   import Modal from "./Modal.vue";
+
+  const portfolios = [
+    {
+      title: "Vesting",
+      year: "2020",
+      technologies: [
+        { name: "Vue", src: "vue.svg" }
+      ],
+      description: ""
+    },
+    {
+      title: "MOCISCHOOL",
+      year: "2021",
+      technologies: [
+        { name: "Vue", src: "vue.svg" }
+      ],
+      description: ""
+    }
+  ]
+
+  const open = new Array(portfolios.length).fill(false);
 
   export default {
     name: "Home",
@@ -70,8 +88,8 @@
     },
     data() {
       return {
-        open1: false,
-        open2: false
+        portfolios,
+        open
       }
     }
   };
