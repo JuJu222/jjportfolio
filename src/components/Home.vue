@@ -7,15 +7,7 @@
           <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
             <span class="block text-indigo-600 xl:inline">Justin Jap</span>
           </h1>
-          <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div class="rounded-md shadow">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> Get started </a>
-            </div>
-            <div class="mt-3 sm:mt-0 sm:ml-3">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"> Live demo </a>
-            </div>
-          </div>
+          <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">I am currently an informatics student studying in Ciputra University Surabaya. I love technology and I like to explore new things, especially if it is related with programming. I would describe myself as creative, discipline, persistent, and hard-working.</p>
         </div>
       </div>
       <div>
@@ -23,8 +15,8 @@
       </div>
     </div>
     <div>
-      <h2 class="text-5xl text-center">Skills</h2>
-      <div class="flex h-60 my-10 flex-wrap justify-center">
+      <h2 class="text-5xl text-center">Portfolio</h2>
+      <div class="flex my-10 flex-wrap justify-center">
         <PortfolioCard v-for="(portfolio, index) in portfolios" class="m-5 z-10" :portfolio="portfolio" @click="open[index] = true"/>
       </div>
     </div>
@@ -68,7 +60,8 @@
       technologies: [
         { name: "Vue", src: "vue.svg" }
       ],
-      description: ""
+      description: "Vesting is an Android application that allows users to simulate buying and selling shares without having to worry about the actual risk of losing real money in the stock market. Users are able to see the share price of up to 500 companies from the US stock market along with their statistics and other important information. Vesting also provides the hottest news available to help you make your decision on which stocks to buy or sell. This project is built with Java using Android Studio with the latest market data from Alpha Vantage. Vesting has been granted a copyright by Ciputra University.\n",
+      img: "vesting.png"
     },
     {
       title: "MOCISCHOOL",
@@ -76,8 +69,37 @@
       technologies: [
         { name: "Vue", src: "vue.svg" }
       ],
-      description: ""
-    }
+      description: "MOCISCHOOL is a website built to help optimize the operational field of schools, especially for the maintenance of school buildings. It is equipped with a system to easily view, add, edit, report, and delete maintenance data. It also allows the user to schedule meetings along with reporting the result of past meetings. User roles are added (between admins and regular users) to limit access to certain features. This project is built with PHP using Laravel along with MySQL as the database. MOCISCHOOL has been granted a copyright by Ciputra University.",
+      img: "mocischool.png"
+    },
+    {
+      title: "Technopreneurship Workshop",
+      year: "2022",
+      technologies: [
+        { name: "Vue", src: "vue.svg" }
+      ],
+      description: "Technopreneurship Workshop is a technology-themed workshop hosted annually by IMT Student Union Ciputra University that aims to improve relationships between students as well as train and prepare participants to become young technopreneurs with integrity and professionalism. This web application allows participating investors to invest in different projects created by the students and show which team is currently leading the game. This project is built with Vue.js and Tailwind CSS on the front-end along with PHP using Laravel with MySQL database as the back-end.",
+      img: "technoshop.png"
+    },
+    {
+      title: "PhysX",
+      year: "2022",
+      technologies: [
+        { name: "Vue", src: "vue.svg" }
+      ],
+      description: "PhysX is an application (Android based and also web-based) which aims to help 10th graders in Indonesia to better understand the 2022 physics curriculum set by the Indonesian government. This project is designed to accelerate the understanding of basic physics theory along with day-to-day implementations using a gamified quiz system. Some of the topics that are covered in this project include vectors, straight line motion, and Newton's laws of motion. This project is built with Java using Android Studio and with PHP using Laravel along with MySQL as the database.",
+      img: "physx.png"
+    },
+    {
+      title: "StartNow",
+      year: "2021",
+      technologies: [
+        { name: "Vue", src: "vue.svg" }
+      ],
+      description: "StartNow is an android and web-based application that aims to provide easier access for Indonesian startups to\n" +
+          "collaborate with each other along with connecting them to investors who want to look and invest in startups that matches their interest. StartNow acts as a forum that focuses on supporting the growth of startups in Indonesia by expanding their network and providing easier access to obtain extra capital. This project is built with Java using Android Studio and with PHP using Laravel along with MySQL as the database. StartNow was a finalist in the LO Kreatif 2021 Competition, Mobile/Web Application category.",
+      img: "startnow.png"
+    },
   ]
 
   const open = new Array(portfolios.length).fill(false);

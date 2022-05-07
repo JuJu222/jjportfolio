@@ -16,7 +16,7 @@
                 <div class="my-3 text-left">
                   <div class="">
                     <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
-                      <img src="https://wallpaperaccess.com/full/2029165.jpg" alt="" class="w-full h-full object-center object-cover" />
+                      <img :src="'/img/portfolio/' + portfolio.img" alt="" class="w-full h-full object-center object-cover" />
                     </div>
                   </div>
                   <div>
@@ -30,7 +30,7 @@
                         <img src="/img/icons/python.svg" alt="" class="w-7 h-7" />
                       </div>
                     </div>
-                    <p class="text-sm text-gray-500 mt-2">Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.</p>
+                    <p class="text-sm text-gray-500 mt-2">{{ portfolio.description }}</p>
                   </div>
                 </div>
               </div>

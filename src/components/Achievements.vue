@@ -18,24 +18,32 @@
 <script>
   const achievements = [
     {
-      school: 'Cita Hati Elementary School East Campus',
-      location: 'Surabaya, Indonesia',
-      duration: '2008 – 2014',
+      name: 'International Competitions and Assessments for Schools (ICAS)',
+      place: 'Gold Medal (High Distinction)',
+      category: 'Digital Technologies',
+      scope: 'International',
+      year: '2017',
     },
     {
-      school: 'Cita Hati Junior High School West Campus',
-      location: 'Surabaya, Indonesia',
-      duration: '2014 – 2017',
+      name: 'International Competitions and Assessments for Schools (ICAS)',
+      place: 'Distinction',
+      category: 'Digital Technologies',
+      scope: 'International',
+      year: '2018',
     },
     {
-      school: 'Cita Hati Senior High School West Campus',
-      location: 'Surabaya, Indonesia',
-      duration: '2017 – 2020',
+      name: 'Science Your Future Competition (SYFC)',
+      place: 'Gold Medal (High Distinction)',
+      category: 'STEM',
+      scope: 'National (Indonesia)',
+      year: '2018',
     },
     {
-      school: 'Informatics - School of Information Technology, Ciputra University',
-      location: 'Surabaya, Indonesia',
-      duration: '2020 – Present',
+      name: 'LO Kreatif 2021',
+      place: 'Finalist',
+      category: 'Mobile/Web Application',
+      scope: 'National (Indonesia)',
+      year: '2021',
     },
   ]
 

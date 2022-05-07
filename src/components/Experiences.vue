@@ -18,24 +18,40 @@
 <script>
   const experiences = [
     {
-      school: 'Cita Hati Elementary School East Campus',
+      organization: 'Era Kita Lontar',
+      position: 'Intern',
       location: 'Surabaya, Indonesia',
-      duration: '2008 – 2014',
+      duration: '2019',
     },
     {
-      school: 'Cita Hati Junior High School West Campus',
+      organization: '8TH NPLC Ciputra University',
+      position: 'Programming Division Member',
       location: 'Surabaya, Indonesia',
-      duration: '2014 – 2017',
+      duration: '2020',
     },
     {
-      school: 'Cita Hati Senior High School West Campus',
+      organization: 'Leadership 101 Training Ciputra University',
+      position: 'Participant',
       location: 'Surabaya, Indonesia',
-      duration: '2017 – 2020',
+      duration: '2021',
     },
     {
-      school: 'Informatics - School of Information Technology, Ciputra University',
+      organization: 'IMT (Informatics) Student Union Ciputra University',
+      position: 'Treasurer',
       location: 'Surabaya, Indonesia',
-      duration: '2020 – Present',
+      duration: '2021 - 2022',
+    },
+    {
+      organization: 'MOCISCHOOL Research & Community Service Project',
+      position: 'Full Stack Developer',
+      location: 'Surabaya, Indonesia',
+      duration: '2022',
+    },
+    {
+      organization: 'Technopreneurship Workshop 2022',
+      position: 'Full Stack Developer',
+      location: 'Surabaya, Indonesia',
+      duration: '2022',
     },
   ]
 
