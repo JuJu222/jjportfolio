@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="flex flex-row justify-center gap-x-34">
+    <section id="profile" class="flex flex-row justify-center gap-x-34">
       <div class="mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
         <div class="sm:text-center lg:text-left">
           <h2 class="block xl:inline text-4xl text-center">Hi, I'm</h2>
@@ -13,14 +13,14 @@
       <div>
         <img class="home-img" src="/img/justinjapweb.png" alt="" />
       </div>
-    </div>
-    <div>
+    </section>
+    <section id="portfolio">
       <h2 class="text-5xl text-center">Portfolio</h2>
       <div class="flex my-10 flex-wrap justify-center">
         <PortfolioCard v-for="(portfolio, index) in portfolios" class="m-5 z-10" :portfolio="portfolio" @click="open[index] = true"/>
       </div>
-    </div>
-    <div>
+    </section>
+    <section id="skills">
       <h2 class="text-5xl text-center">Skills</h2>
       <div class="flex my-10 flex-wrap justify-center">
         <SkillCard class="m-5" title="Android" icon="/img/icons/android.svg"/>
@@ -38,9 +38,13 @@
         <SkillCard class="m-5" title="Firebase" icon="/img/icons/firebase.svg"/>
         <Modal v-for="(portfolio, index) in portfolios" :portfolio="portfolio" :open="open[index]" @clicked="open[index] = false"/>
       </div>
-    </div>
-    <Education class="w-2/4"></Education>
-    <Experiences class="w-2/4"></Experiences>
+    </section>
+    <section id="education">
+      <Education class="w-2/4"></Education>
+    </section>
+    <section id="experiences">
+      <Experiences class="w-2/4"></Experiences>
+    </section>
   </section>
 </template>
 

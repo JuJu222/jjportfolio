@@ -47,3 +47,15 @@ li.timeline-item::before {
     height: 14px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+
+.activea {
+    color: #3f4b6d;
+    font-size: 16pt;
+    transition: 500ms;
+}
+
+.notactivea {
+    color: black;
+    font-size: 12pt;
+    transition: 500ms;
+}
