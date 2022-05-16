@@ -6,11 +6,19 @@ import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <Navbar />
-  <div class="container mx-auto">
-    <router-view></router-view>
+  <div class="w-full h-full">
+    <!-- Navigation starts -->
+    <Navbar />
+    <!-- Navigation ends -->
+    <!-- Page title ends -->
+    <div class="container mx-auto px-6">
+      <!-- Remove class [ h-64 ] when adding a card block -->
+      <!-- Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border -->
+        <router-view></router-view>
+    </div>
   </div>
-  <Footer />
+  <div class="container mx-auto">
+  </div>
 </template>
 
 <style>

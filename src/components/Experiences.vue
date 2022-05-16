@@ -1,13 +1,14 @@
 <template>
   <section class="mb-5">
-    <h3 class="section-title" style="margin-left: 10px;">Education</h3>
+    <h3 class="section-title" style="margin-left: 10px;">Experiences</h3>
     <ul class="timeline">
       <li v-for="(experience,index) in experiences" :key="index" class="timeline-item rounded ml-3 p-4 shadow">
         <div class="timeline-arrow"></div>
         <p class="h5 bold">
           <!-- <i class="fa fa-university mr-1"></i> -->
-          {{experience.school}}
+          {{experience.organization}}
         </p>
+        <span style="font-style: italic;">{{experience.position}}</span><br>
         <span style="font-style: italic;">{{experience.location}}</span><br>
         <span style="font-style: italic;">{{experience.duration}}</span>
       </li>

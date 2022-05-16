@@ -1,15 +1,17 @@
 <template>
   <section class="mb-5">
-    <h3 class="section-title" style="margin-left: 10px;">Education</h3>
+    <h3 class="section-title" style="margin-left: 10px;">Achievements</h3>
     <ul class="timeline">
       <li v-for="(achievement,index) in achievements" :key="index" class="timeline-item rounded ml-3 p-4 shadow">
         <div class="timeline-arrow"></div>
         <p class="h5 bold">
           <!-- <i class="fa fa-university mr-1"></i> -->
-          {{achievement.school}}
+          {{achievement.name}}
         </p>
-        <span style="font-style: italic;">{{achievement.location}}</span><br>
-        <span style="font-style: italic;">{{achievement.duration}}</span>
+        <span style="font-style: italic;">{{achievement.place}}</span><br>
+        <span style="font-style: italic;">{{achievement.category}}</span>
+        <span style="font-style: italic;">{{achievement.scope}}</span>
+        <span style="font-style: italic;">{{achievement.year}}</span>
       </li>
     </ul>
   </section>

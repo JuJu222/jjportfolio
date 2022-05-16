@@ -1,6 +1,6 @@
 <template>
   <div
-      class="wrapper max-w-xs bg-gray-50 rounded-b-md shadow-lg card"
+      class="wrapper max-w-xs bg-gray-50 rounded-xl shadow-lg card overflow-hidden"
   >
     <div>
       <img :src="'/img/portfolio/' + portfolio.img" alt="montaña"/>
@@ -9,12 +9,12 @@
       <h3 class="text-gray-700 font-semibold text-md">
         {{ portfolio.title }}
       </h3>
-      <p class="text-sm text-gray-900 leading-sm">
+      <p class="text-sm text-gray-900 leading-sm text-ellipsis">
         {{ portfolio.description }}
       </p>
     </div>
     <div
-        class="bg-teal-600 w-full flex justify-center py-2 text-white font-semibold transition duration-300 hover:bg-teal-500"
+        class="me-bg w-full flex justify-center py-2 text-white font-semibold transition duration-300"
     >
 
       <h3 class="font-semibold text-md">
@@ -42,17 +42,5 @@
     transition: transform 1s ease;
     min-width: 400px;
     height: min-content;
-  }
-
-  .card:hover > .card-body {
-    opacity: 1;
-    height: 200px;
-  }
-
-  .card-body {
-    transition: all 1s ease;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
   }
 </style>

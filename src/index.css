@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.me-color {
+    color: #3f4b6d;
+}
+
+.me-bg {
+    background: #3f4b6d;
+}
+
 .navbar-active {
     color: white !important;
 }
@@ -20,7 +28,7 @@ ul.timeline {
 /* Timeline vertical line */
 ul.timeline:before {
     content: ' ';
-    background: #4f46e5;
+    background: #3f4b6d;
     display: inline-block;
     position: absolute;
     left: 16px;
@@ -37,7 +45,7 @@ li.timeline-item {
 /* Timeline item circle marker */
 li.timeline-item::before {
     content: ' ';
-    background: #4f46e5;
+    background: #3f4b6d;
     display: inline-block;
     position: absolute;
     border-radius: 50%;
@@ -49,13 +57,22 @@ li.timeline-item::before {
 }
 
 .activea {
-    color: #3f4b6d;
-    font-size: 16pt;
+    color: white;
     transition: 500ms;
+    background: #3f4b6d;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
 }
 
 .notactivea {
     color: black;
-    font-size: 12pt;
     transition: 500ms;
+    border-radius: 8px;
+}
+
+.text-ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

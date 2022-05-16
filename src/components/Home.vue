@@ -1,23 +1,19 @@
 <template>
   <section>
-    <section id="profile" class="flex flex-row justify-center gap-x-34">
-      <div class="mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-        <div class="sm:text-center lg:text-left">
-          <h2 class="block xl:inline text-4xl text-center">Hi, I'm</h2>
-          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-            <span class="block text-indigo-600 xl:inline">Justin Jap</span>
-          </h1>
-          <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">I am currently an informatics student studying in Ciputra University Surabaya. I love technology and I like to explore new things, especially if it is related with programming. I would describe myself as creative, discipline, persistent, and hard-working.</p>
-        </div>
+    <section id="profile" class="pt-8 lg:flex items-center relative z-10 container mx-auto">
+      <div class="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0">
+        <img class="mx-auto home-img" src="/img/justinjapweb.png" />
       </div>
-      <div>
-        <img class="home-img" src="/img/justinjapweb.png" alt="" />
+      <div class="w-full lg:w-1/2 h-full">
+        <p class="text-indigo-500 text-4xl mb-4">Hi, I'm</p>
+        <h1 class="text-gray-900 text-4xl md:text-7xl mb-8">Justin Jap</h1>
+        <p class="text-gray-500 font-regular text-xl mb-8">I am currently an informatics student studying in Ciputra University Surabaya. I love technology and I like to explore new things, especially if it is related with programming. I would describe myself as creative, discipline, persistent, and hard-working.</p>
       </div>
     </section>
     <section id="portfolio">
       <h2 class="text-5xl text-center">Portfolio</h2>
-      <div class="flex my-10 flex-wrap justify-center">
-        <PortfolioCard v-for="(portfolio, index) in portfolios" class="m-5 z-10" :portfolio="portfolio" @click="open[index] = true"/>
+      <div class="flex my-10 flex-wrap justify-center items-stretch">
+        <PortfolioCard v-for="(portfolio, index) in portfolios" class="m-5 z-10 h-full" :portfolio="portfolio" @click="open[index] = true"/>
       </div>
     </section>
     <section id="skills">
@@ -39,12 +35,17 @@
         <Modal v-for="(portfolio, index) in portfolios" :portfolio="portfolio" :open="open[index]" @clicked="open[index] = false"/>
       </div>
     </section>
-    <section id="education">
-      <Education class="w-2/4"></Education>
-    </section>
-    <section id="experiences">
-      <Experiences class="w-2/4"></Experiences>
-    </section>
+    <div class="flex flex-wrap justify-center">
+      <section id="education" class="w-2/4">
+        <Education></Education>
+      </section>
+      <section id="achievements" class="w-2/4">
+        <Achievements></Achievements>
+      </section>
+      <section id="experiences" class="w-2/4">
+        <Experiences></Experiences>
+      </section>
+    </div>
   </section>
 </template>
 
@@ -56,6 +57,7 @@
   import Modal from "./Modal.vue";
   import Education from "./Education.vue";
   import Experiences from "./Experiences.vue";
+  import Achievements from "./Achievements.vue";
 
   const portfolios = [
     {
@@ -111,6 +113,7 @@
   export default {
     name: "Home",
     components: {
+      Achievements,
       Education,
       Experiences,
       Modal,
