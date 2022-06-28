@@ -26,13 +26,13 @@
       </div>
     </section>
     <div class="flex flex-wrap justify-center">
-      <section id="education" class="w-1/3">
+      <section id="education" class="w-96 md:w-1/3">
         <Education></Education>
       </section>
-      <section id="achievements" class="w-1/3">
+      <section id="achievements" class="w-96 md:w-1/3">
         <Achievements></Achievements>
       </section>
-      <section id="experiences" class="w-1/3">
+      <section id="experiences" class="w-96 md:w-1/3">
         <Experiences></Experiences>
       </section>
     </div>

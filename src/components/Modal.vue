@@ -15,7 +15,7 @@
               <div class="sm:flex sm:items-start">
                 <div class="my-3 text-left">
                   <div class="">
-                    <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
+                    <div class="aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
                       <img :src="'/img/portfolio/' + portfolio.img" alt="" class="w-full h-full object-center object-cover" />
                     </div>
                   </div>

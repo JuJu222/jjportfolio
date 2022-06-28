@@ -1,6 +1,6 @@
 <template>
   <section class="mb-5">
-    <h3 class="section-title text-2xl" style="margin-left: 10px;">Education</h3>
+    <h3 class="section-title text-2xl me-color" style="margin-left: 10px;">Education</h3>
     <ul class="timeline">
       <li v-for="(education,index) in educationInfo" :key="index" class="timeline-item rounded ml-3 p-4 shadow">
         <div class="timeline-arrow"></div>

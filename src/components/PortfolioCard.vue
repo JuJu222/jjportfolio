@@ -1,6 +1,6 @@
 <template>
   <div
-      class="wrapper max-w-xs bg-gray-50 rounded-xl shadow-lg card overflow-hidden flex flex-col justify-between"
+      class="wrapper max-w-xs bg-gray-50 rounded-xl shadow-lg card overflow-hidden flex flex-col justify-between cursor-pointer"
   >
     <div>
       <img :src="'/img/portfolio/' + portfolio.img" alt="montaña"/>
