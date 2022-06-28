@@ -11,13 +11,13 @@
       </div>
     </section>
     <section id="portfolio">
-      <h2 class="text-5xl text-center">Portfolio</h2>
+      <h2 class="text-5xl text-center me-color">Portfolio</h2>
       <div class="flex my-10 flex-wrap justify-center items-stretch">
-        <PortfolioCard v-for="(portfolio, index) in portfolios" class="m-5 z-10 h-full" :portfolio="portfolio" @click="open[index] = true"/>
+        <PortfolioCard v-for="(portfolio, index) in portfolios" class="m-5 z-10" :portfolio="portfolio" @click="open[index] = true"/>
       </div>
     </section>
     <section id="skills">
-      <h2 class="text-5xl text-center">Skills</h2>
+      <h2 class="text-5xl text-center me-color">Skills</h2>
       <div class="flex my-10 flex-wrap justify-center">
         <template v-for="(skill, index) in skills">
           <SkillCard v-if="index === 'Kotlin'" class="m-5" :title="index" img-class="w-16" :icon="'/img/icons/' + skill.img"/>
@@ -26,13 +26,13 @@
       </div>
     </section>
     <div class="flex flex-wrap justify-center">
-      <section id="education" class="w-2/4">
+      <section id="education" class="w-1/3">
         <Education></Education>
       </section>
-      <section id="achievements" class="w-2/4">
+      <section id="achievements" class="w-1/3">
         <Achievements></Achievements>
       </section>
-      <section id="experiences" class="w-2/4">
+      <section id="experiences" class="w-1/3">
         <Experiences></Experiences>
       </section>
     </div>

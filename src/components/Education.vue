@@ -1,15 +1,15 @@
 <template>
   <section class="mb-5">
-    <h3 class="section-title" style="margin-left: 10px;">Education</h3>
+    <h3 class="section-title text-2xl" style="margin-left: 10px;">Education</h3>
     <ul class="timeline">
       <li v-for="(education,index) in educationInfo" :key="index" class="timeline-item rounded ml-3 p-4 shadow">
         <div class="timeline-arrow"></div>
-        <p class="h5 bold">
+        <p class="font-bold me-color">
           <!-- <i class="fa fa-university mr-1"></i> -->
           {{education.school}}
         </p>
-        <span style="font-style: italic;">{{education.location}}</span><br>
-        <span style="font-style: italic;">{{education.duration}}</span>
+        <div style="font-style: italic;">{{education.location}}</div>
+        <div>{{education.duration}}</div>
       </li>
     </ul>
   </section>

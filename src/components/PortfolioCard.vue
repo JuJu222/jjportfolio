@@ -1,15 +1,18 @@
 <template>
   <div
-      class="wrapper max-w-xs bg-gray-50 rounded-xl shadow-lg card overflow-hidden"
+      class="wrapper max-w-xs bg-gray-50 rounded-xl shadow-lg card overflow-hidden flex flex-col justify-between"
   >
     <div>
       <img :src="'/img/portfolio/' + portfolio.img" alt="montaña"/>
     </div>
-    <div class="p-3 space-y-2 card-body">
-      <h3 class="text-gray-700 font-semibold text-md">
+    <div class="p-3 card-body">
+      <h3 class="text-gray-700 font-semibold text-lg">
         {{ portfolio.title }}
       </h3>
-      <div class="flex flex-row">
+      <h4 class="text-sm">
+        Android Developer
+      </h4>
+      <div class="flex flex-row my-2">
         <h2 class="text-gray-900">{{ portfolio.year }}</h2>
         <p class="mx-2 me-color">&#9679;</p>
         <div class="flex flex-row">
@@ -48,6 +51,5 @@
   .card {
     transition: transform 1s ease;
     min-width: 400px;
-    height: min-content;
   }
 </style>

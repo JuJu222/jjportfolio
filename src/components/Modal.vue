@@ -21,16 +21,17 @@
                   </div>
                   <div>
                     <h1 class="text-xl font-extrabold text-gray-900 sm:text-3xl mt-2">{{ portfolio.title }}</h1>
-                    <div class="flex flex-row">
+                    <h4 class="text-md">
+                      Android Developer
+                    </h4>
+                    <div class="flex flex-row my-3">
                       <h2 class="text-lg text-gray-900">{{ portfolio.year }}</h2>
                       <p class="mx-2 text-indigo-600">&#9679;</p>
                       <div class="flex flex-row">
-                        <img src="/img/icons/firebase.svg" alt="" class="w-7 h-7" />
-                        <img src="/img/icons/php.svg" alt="" class="w-7 h-7" />
-                        <img src="/img/icons/python.svg" alt="" class="w-7 h-7" />
+                        <img v-for="technology in portfolio.technologies" :src="'/img/icons/' + technology.img" :alt="technology" class="w-7 h-7" />
                       </div>
                     </div>
-                    <p class="text-sm text-gray-500 mt-2">{{ portfolio.description }}</p>
+                    <p class="text-sm text-gray-500">{{ portfolio.description }}</p>
                   </div>
                 </div>
               </div>
