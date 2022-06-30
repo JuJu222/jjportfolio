@@ -7,7 +7,7 @@
       <div class="w-full lg:w-1/2 h-full">
         <p class="me-color text-4xl mb-4">Hi, I'm</p>
         <h1 class="text-gray-900 text-4xl md:text-7xl mb-8">Justin Jap</h1>
-        <p class="text-gray-500 font-regular text-xl mb-8">I am currently an informatics student studying in Ciputra University Surabaya. I love technology and I like to explore new things, especially if it is related with programming. I would describe myself as creative, discipline, persistent, and hard-working.</p>
+        <p class="text-gray-500 font-regular text-xl mb-8 md:pr-32">I am currently an informatics student studying in Ciputra University Surabaya. I love technology and I like to explore new things, especially if it is related with programming. I would describe myself as creative, discipline, persistent, and hard-working.</p>
       </div>
     </section>
     <section id="portfolio">
