@@ -51,4 +51,12 @@ export const skills = {
         title: "Firebase",
         img: "firebase.svg"
     },
+    "Swift": {
+        title: "Swift",
+        img: "swift.svg"
+    },
+    "SwiftUI": {
+        title: "SwiftUI",
+        img: "swiftui.svg"
+    },
 }
